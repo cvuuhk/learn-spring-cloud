@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ProducerController {
 
-    @Value("${my.key:default_key}")
+    @Value("${my.key}")
     String key;
 
-    @Value("${my.value:default_value}")
+    @Value("${my.value}")
     String value;
 
     @GetMapping("/hello")

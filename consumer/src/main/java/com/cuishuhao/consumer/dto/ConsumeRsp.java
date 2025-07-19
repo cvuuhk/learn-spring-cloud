@@ -1,4 +1,4 @@
-package com.cuishuhao.consumer;
+package com.cuishuhao.consumer.dto;
 
 public class ConsumeRsp {
     String id;
