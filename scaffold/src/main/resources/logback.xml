@@ -1,0 +1,18 @@
+<configuration>
+
+    <conversionRule conversionWord="customerize_color" converterClass="com.cuishuhao.scaffold.config.LogHighlightConfig" />
+
+    <property name="plain_pattern" value="%d{HH:mm:ss.SSS, Asia/Shanghai} %5level [%thread] %logger{1} - %msg%n"/>
+    <property name="color_pattern" value="%customerize_color(${plain_pattern})"/>
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${color_pattern}</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+</configuration>
