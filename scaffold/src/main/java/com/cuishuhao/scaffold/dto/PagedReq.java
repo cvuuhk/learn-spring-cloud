@@ -12,7 +12,7 @@ import lombok.Setter;
 public class PagedReq {
 
     // todo: 默认值
-    @Max(value = 5000)
+    @Max(value = 500)
     protected Integer pageSize;
 
     // todo: 默认值 1
