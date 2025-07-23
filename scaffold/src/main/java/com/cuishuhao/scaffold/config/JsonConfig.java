@@ -1,5 +1,6 @@
 package com.cuishuhao.scaffold.config;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.json.JsonMapper;
@@ -14,8 +15,8 @@ public class JsonConfig {
     @Primary
     public ObjectMapper defaultObjectMapper() {
         return JsonMapper.builder()
-                // 严格类型匹配：不允许自动进行类型转换
-                .disable(MapperFeature.ALLOW_COERCION_OF_SCALARS)
+                .disable(MapperFeature.ALLOW_COERCION_OF_SCALARS) // 严格类型匹配：不允许自动进行类型转换
+                .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES) // 忽略未知字段
                 .build();
     }
 

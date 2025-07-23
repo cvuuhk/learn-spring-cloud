@@ -6,7 +6,7 @@ public class SnowFlakeUtil {
 
     private static final DefaultIdentifierGenerator GENERATOR = DefaultIdentifierGenerator.getInstance();
 
-    public Long nextId() {
+    public static Long nextId() {
         return GENERATOR.nextId(null);
     }
 }

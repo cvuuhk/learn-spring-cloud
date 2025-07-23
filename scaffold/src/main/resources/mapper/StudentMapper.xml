@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cuishuhao.scaffold.mapper.StudentMapper">
+    <insert id="insertBatch">
+        <if test="students != null and !students.isEmpty()">
+            insert into t_student(id, name, age, major, admission) values
+            <foreach collection="students" item="student" separator=",">
+                ( #{student.id}, #{student.name}, #{student.age}, #{student.major}, #{student.admission} )
+            </foreach>
+        </if>
+    </insert>
+</mapper>

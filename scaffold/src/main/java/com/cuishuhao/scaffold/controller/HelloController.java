@@ -19,7 +19,7 @@ public class HelloController {
 
     @PostMapping("/hello")
     public HelloRsp hello(@Valid @RequestBody HelloReq req) {
-        String name = service.hello(req.getName());
+        String name = service.hello(req.getFirstName());
         return new HelloRsp(name);
     }
 

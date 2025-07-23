@@ -9,8 +9,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.time.Duration;
-import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 @Slf4j
 @SpringBootApplication
@@ -26,22 +27,13 @@ public class Application implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Student student = new Student();
-        student.setName("name");
-        student.setAge(20);
-        student.setMajor("计算机科学与技术");
-        student.setAdmission(LocalDate.now());
+        Collection<Student> collection = new ArrayList<>();
+        logger.warn("insert null");
+        studentMapper.insertBatch(null);
+        logger.warn("insert empty");
+        studentMapper.insertBatch(Collections.emptyList());
 
-        studentMapper.insert(student);
-
-        try {
-        Thread.sleep(Duration.ofSeconds(2));
-        } catch (InterruptedException ignore) {
-        }
-
-        studentMapper.updateNameById("newName", student.getId());
-
-        Student s = studentMapper.selectById(student.getId());
-        logger.info("s = {}", s);
+        logger.warn("{}", tt());
     }
+
 }

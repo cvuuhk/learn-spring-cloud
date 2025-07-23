@@ -8,9 +8,9 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 public class HelloRsp {
-    private String name;
+    private String message;
 
-    public HelloRsp(String name) {
-        this.name = name;
+    public HelloRsp(String message) {
+        this.message = message;
     }
 }

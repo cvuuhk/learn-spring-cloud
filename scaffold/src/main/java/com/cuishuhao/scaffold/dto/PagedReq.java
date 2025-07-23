@@ -18,4 +18,6 @@ public class PagedReq {
     // todo: 默认值 1
     @Min(value = 1)
     protected Integer pageIndex;
+
+    // todo: 排序
 }
