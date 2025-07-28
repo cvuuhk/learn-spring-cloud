@@ -3,6 +3,7 @@
 
 代码风格
     不要使用 import *
+    和 mapstruct 配合时，谨慎使用 lombok 的 @Builder 注解
 
 数据库
     MySQL 时间类型使用 timestamp，Java 类型使用 Instant 承接

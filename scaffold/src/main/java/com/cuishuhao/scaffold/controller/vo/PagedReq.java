@@ -1,10 +1,12 @@
-package com.cuishuhao.scaffold.dto;
+package com.cuishuhao.scaffold.controller.vo;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Getter
 @Setter
@@ -20,4 +22,5 @@ public class PagedReq {
     protected Integer pageIndex;
 
     // todo: 排序
+    protected List<OrderBy> orders;
 }

@@ -1,4 +1,4 @@
-package com.cuishuhao.scaffold.mapper;
+package com.cuishuhao.scaffold.repository;
 
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.Collection;
 
-public interface StudentMapper extends BaseMapper<Student> {
+public interface StudentRepository extends BaseMapper<Student> {
 
     default void updateNameById(String name, Long id) {
         LambdaUpdateWrapper<Student> wrapper = new LambdaUpdateWrapper<>();

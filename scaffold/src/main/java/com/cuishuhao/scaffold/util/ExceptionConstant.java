@@ -1,4 +1,4 @@
-package com.cuishuhao.scaffold.exception;
+package com.cuishuhao.scaffold.util;
 
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;

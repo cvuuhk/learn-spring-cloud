@@ -1,4 +1,4 @@
-package com.cuishuhao.scaffold.dto;
+package com.cuishuhao.scaffold.controller.vo;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
