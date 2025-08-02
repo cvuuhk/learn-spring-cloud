@@ -10,9 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 public class OrderBy {
 
-    private String column;
+  private String column;
 
-    // todo: 枚举
-    @Pattern(regexp = "^(ASC|DESC)$")
-    private String order;
+  // todo: 枚举
+  @Pattern(regexp = "^(ASC|DESC)$")
+  private String order;
 }

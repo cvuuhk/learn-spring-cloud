@@ -13,24 +13,16 @@ import java.time.LocalDate;
 @TableName("t_student")
 public class Student extends BaseEntity {
 
-    private String name;
+  private String name;
 
-    private Integer age;
+  private Integer age;
 
-    private String major;
+  private String major;
 
-    private LocalDate admission;
+  private LocalDate admission;
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "id='" + id + '\'' +
-                ", createdAt=" + createdAt +
-                ", lastUpdatedAt=" + lastUpdatedAt +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", major='" + major + '\'' +
-                ", admission=" + admission +
-                '}';
-    }
+  @Override
+  public String toString() {
+    return "Student{" + "id='" + id + '\'' + ", createdAt=" + createdAt + ", lastUpdatedAt=" + lastUpdatedAt + ", " + "name='" + name + '\'' + ", age=" + age + ", major='" + major + '\'' + ", admission=" + admission + '}';
+  }
 }

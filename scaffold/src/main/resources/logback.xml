@@ -1,6 +1,7 @@
 <configuration>
 
-    <conversionRule conversionWord="customerize_color" converterClass="com.cuishuhao.scaffold.config.LogHighlightConfig" />
+    <conversionRule conversionWord="customerize_color"
+                    converterClass="com.cuishuhao.scaffold.config.LogHighlightConfig"/>
 
     <property name="plain_pattern" value="%d{HH:mm:ss.SSS, Asia/Shanghai} %5level [%thread] %logger{1} - %msg%n"/>
     <property name="color_pattern" value="%customerize_color(${plain_pattern})"/>

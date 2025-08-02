@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class AuditableEntity extends BaseEntity {
 
-    protected String createdBy;
+  protected String createdBy;
 
-    protected String lastUpdatedBy;
+  protected String lastUpdatedBy;
 }

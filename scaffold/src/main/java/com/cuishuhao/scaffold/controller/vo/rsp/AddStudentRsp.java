@@ -9,10 +9,10 @@ import lombok.Setter;
 @Setter
 public class AddStudentRsp {
 
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Long id;
+  @JsonSerialize(using = ToStringSerializer.class)
+  private Long id;
 
-    public AddStudentRsp(Long id) {
-        this.id = id;
-    }
+  public AddStudentRsp(Long id) {
+    this.id = id;
+  }
 }

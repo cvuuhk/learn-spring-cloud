@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ValidationConfig {
 
-    @Bean
-    public Validator validator() {
-        return Validation.byProvider(HibernateValidator.class)
-                .configure()
-                .failFast(true)
-                .buildValidatorFactory()
-                .getValidator();
-    }
+  @Bean
+  public Validator validator() {
+    return Validation.byProvider(HibernateValidator.class)
+            .configure()
+            .failFast(true)
+            .buildValidatorFactory()
+            .getValidator();
+  }
 }

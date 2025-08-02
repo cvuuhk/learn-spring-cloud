@@ -13,14 +13,14 @@ import java.util.List;
 @NoArgsConstructor
 public class PagedReq {
 
-    // todo: 默认值
-    @Max(value = 500)
-    protected Integer pageSize;
+  // todo: 默认值
+  @Max(value = 500)
+  protected Integer pageSize;
 
-    // todo: 默认值 1
-    @Min(value = 1)
-    protected Integer pageIndex;
+  // todo: 默认值 1
+  @Min(value = 1)
+  protected Integer pageIndex;
 
-    // todo: 排序
-    protected List<OrderBy> orders;
+  // todo: 排序
+  protected List<OrderBy> orders;
 }

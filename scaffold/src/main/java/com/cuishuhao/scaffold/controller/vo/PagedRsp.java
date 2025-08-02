@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 public class PagedRsp<T> {
 
-    protected Long total;
+  protected Long total;
 
-    protected List<T> data;
+  protected List<T> data;
 }

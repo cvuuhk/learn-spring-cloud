@@ -15,14 +15,14 @@ import java.util.List;
 @Transactional
 public class StudentService {
 
-    @Autowired
-    private StudentRepository repository;
+  @Autowired
+  private StudentRepository repository;
 
-    public Student addStudent(AddStudentReq req) {
-        Student student = DTOMapper.INSTANCE.toEntity(req);
-        student.setAdmission(LocalDate.now());
+  public Student addStudent(AddStudentReq req) {
+    Student student = DTOMapper.INSTANCE.toEntity(req);
+    student.setAdmission(LocalDate.now());
 
-        repository.insertBatch(List.of(student));
-        return student;
-    }
+    repository.insertBatch(List.of(student));
+    return student;
+  }
 }

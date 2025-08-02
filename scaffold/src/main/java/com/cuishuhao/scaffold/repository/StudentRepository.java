@@ -9,12 +9,12 @@ import java.util.Collection;
 
 public interface StudentRepository extends BaseMapper<Student> {
 
-    default void updateNameById(String name, Long id) {
-        LambdaUpdateWrapper<Student> wrapper = new LambdaUpdateWrapper<>();
-        wrapper.set(Student::getName, name);
-        wrapper.eq(Student::getId, id);
-        update(wrapper);
-    }
+  default void updateNameById(String name, Long id) {
+    LambdaUpdateWrapper<Student> wrapper = new LambdaUpdateWrapper<>();
+    wrapper.set(Student::getName, name);
+    wrapper.eq(Student::getId, id);
+    update(wrapper);
+  }
 
-    void insertBatch(@Param("students") Collection<Student> students);
+  void insertBatch(@Param("students") Collection<Student> students);
 }

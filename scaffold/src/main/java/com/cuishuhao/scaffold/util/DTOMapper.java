@@ -9,11 +9,11 @@ import org.mapstruct.factory.Mappers;
 @Mapper
 public interface DTOMapper {
 
-    DTOMapper INSTANCE = Mappers.getMapper(DTOMapper.class);
+  DTOMapper INSTANCE = Mappers.getMapper(DTOMapper.class);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "admission", ignore = true)
-    @Mapping(target = "createdAt", ignore = true)
-    @Mapping(target = "lastUpdatedAt", ignore = true)
-    Student toEntity(AddStudentReq dto);
+  @Mapping(target = "id", ignore = true)
+  @Mapping(target = "admission", ignore = true)
+  @Mapping(target = "createdAt", ignore = true)
+  @Mapping(target = "lastUpdatedAt", ignore = true)
+  Student toEntity(AddStudentReq dto);
 }

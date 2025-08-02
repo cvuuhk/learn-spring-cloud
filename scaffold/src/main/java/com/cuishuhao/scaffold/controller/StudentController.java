@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StudentController {
 
-    private final StudentService service;
+  private final StudentService service;
 
-    public StudentController(StudentService service) {
-        this.service = service;
-    }
+  public StudentController(StudentService service) {
+    this.service = service;
+  }
 
-    @PostMapping("/student/add")
-    public AddStudentRsp addStudent(@Valid @RequestBody AddStudentReq req) {
-        return new AddStudentRsp(service.addStudent(req).getId());
-    }
-
+  @PostMapping("/student/add")
+  public AddStudentRsp addStudent(@Valid @RequestBody AddStudentReq req) {
+    return new AddStudentRsp(service.addStudent(req)
+            .getId());
+  }
 }
